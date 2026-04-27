@@ -23,13 +23,6 @@ export default function Menu() {
   };
 
   const menuImages = [
-<<<<<<< HEAD
-    { id: 1, label: 'Menu Page 1', src: '../images/menu1.png' },
-    { id: 2, label: 'Menu Page 2', src: '../images/menu2.png' },
-    { id: 3, label: 'Menu Page 3', src: '../images/menu3.png' },
-    { id: 4, label: 'Menu Page 4', src: '../images/menu4.png' },
-    { id: 5, label: 'Menu Page 5', src: '../images/menu5.png' },
-=======
     { id: 1, label: 'Menu Page 1' },
     { id: 2, label: 'Menu Page 2' },
     { id: 3, label: 'Menu Page 3' },
@@ -37,7 +30,6 @@ export default function Menu() {
     { id: 5, label: 'Menu Page 5' },
     { id: 6, label: 'Menu Page 6' },
     { id: 7, label: 'Menu Page 7' },
->>>>>>> 5a2d94329250ca4522ac81e2424e420902f12a56
   ];
 
   return (
@@ -52,12 +44,9 @@ export default function Menu() {
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-teal-900 mb-2 sm:mb-3">
             Menu Kami
           </h2>
-<<<<<<< HEAD
-=======
           <p className="text-xs sm:text-sm text-gray-700 max-w-3xl mx-auto px-4">
             Jelajahi pilihan menu istimewa kami yang dibuat dengan bahan-bahan berkualitas tinggi
           </p>
->>>>>>> 5a2d94329250ca4522ac81e2424e420902f12a56
         </motion.div>
 
         <motion.div
@@ -87,21 +76,6 @@ export default function Menu() {
               <div key={menu.id} className="outline-none">
                 <div className="bg-gradient-to-br from-stone-100 to-teal-50 rounded-xl overflow-hidden mx-auto" style={{ aspectRatio: '210/297' }}>
                   <div className="w-full h-full flex flex-col items-center justify-center p-6 sm:p-8">
-<<<<<<< HEAD
-                    <img 
-                      src={menu.src} 
-                      alt={menu.label}
-                      className="w-full h-full object-contain rounded-lg"
-                      onError={(e) => {
-                        // Fallback jika gambar tidak ditemukan
-                        e.currentTarget.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="200" height="283" viewBox="0 0 200 283"%3E%3Crect width="200" height="283" fill="%23f3f4f6"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%239ca3af" font-size="14"%3EMenu %3C/text%3E%3C/svg%3E';
-                      }}
-                    />
-                    <div className="absolute bottom-4 left-0 right-0 text-center">
-                      <p className="text-xs text-gray-600 bg-white/80 inline-block px-3 py-1 rounded-full">
-                        {menu.label}
-                      </p>
-=======
                     <div className="text-center">
                       <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-teal-600 to-emerald-700 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
                         <span className="text-white font-bold text-xl sm:text-2xl">{menu.id}</span>
@@ -115,7 +89,6 @@ export default function Menu() {
                       <div className="bg-white/50 rounded-lg p-3 sm:p-4 text-[10px] sm:text-xs text-gray-500">
                         Ganti dengan foto menu sebenarnya
                       </div>
->>>>>>> 5a2d94329250ca4522ac81e2424e420902f12a56
                     </div>
                   </div>
                 </div>
@@ -154,8 +127,4 @@ export default function Menu() {
       </div>
     </section>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 5a2d94329250ca4522ac81e2424e420902f12a56
