@@ -5,12 +5,16 @@ import { motion, AnimatePresence } from 'motion/react';
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+<<<<<<< HEAD
   const [isMobile, setIsMobile] = useState(false);
+=======
+>>>>>>> 5a2d94329250ca4522ac81e2424e420902f12a56
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
+<<<<<<< HEAD
     
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
@@ -45,6 +49,18 @@ export default function Header() {
         });
       }
     }, 100);
+=======
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false);
+    }
+>>>>>>> 5a2d94329250ca4522ac81e2424e420902f12a56
   };
 
   return (
@@ -53,7 +69,11 @@ export default function Header() {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+<<<<<<< HEAD
         scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white/90 backdrop-blur-sm'
+=======
+        scrolled ? 'bg-white/95 backdrop-blur-md shadow-md' : 'bg-white/80 backdrop-blur-sm'
+>>>>>>> 5a2d94329250ca4522ac81e2424e420902f12a56
       }`}
     >
       <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
@@ -61,6 +81,7 @@ export default function Header() {
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
+<<<<<<< HEAD
             className="flex items-center gap-2 cursor-pointer"
             onClick={() => scrollToSection('home')}
           >
@@ -75,6 +96,16 @@ export default function Header() {
             <div>
               <h1 className="text-base sm:text-lg font-bold text-orange-800">Lesung Pipi</h1>
               <p className="text-[10px] sm:text-xs text-orange-600 hidden sm:block">Cafe & Eatery</p>
+=======
+            className="flex items-center gap-2"
+          >
+            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-teal-600 via-teal-700 to-emerald-800 rounded-full flex items-center justify-center shadow-md">
+              <span className="text-white font-bold text-sm sm:text-base">LP</span>
+            </div>
+            <div>
+              <h1 className="text-base sm:text-lg font-bold text-teal-900">Lesung Pipi</h1>
+              <p className="text-[10px] sm:text-xs text-teal-700 hidden sm:block">Cafe & Coffee</p>
+>>>>>>> 5a2d94329250ca4522ac81e2424e420902f12a56
             </div>
           </motion.div>
 
@@ -86,7 +117,11 @@ export default function Header() {
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection(section)}
+<<<<<<< HEAD
                 className="text-sm text-gray-700 hover:text-orange-600 transition-colors capitalize font-medium"
+=======
+                className="text-sm text-gray-700 hover:text-teal-700 transition-colors capitalize"
+>>>>>>> 5a2d94329250ca4522ac81e2424e420902f12a56
               >
                 {section}
               </motion.button>
@@ -97,7 +132,11 @@ export default function Header() {
           <motion.button
             whileTap={{ scale: 0.9 }}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+<<<<<<< HEAD
             className="md:hidden p-1.5 text-gray-700 hover:text-orange-600 transition-colors"
+=======
+            className="md:hidden p-1.5 text-gray-700 hover:text-teal-700 transition-colors"
+>>>>>>> 5a2d94329250ca4522ac81e2424e420902f12a56
           >
             {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </motion.button>
@@ -110,9 +149,15 @@ export default function Header() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
+<<<<<<< HEAD
               className="md:hidden overflow-hidden border-t border-orange-100"
             >
               <div className="flex flex-col py-3 bg-white/95">
+=======
+              className="md:hidden overflow-hidden border-t border-gray-200"
+            >
+              <div className="flex flex-col py-3">
+>>>>>>> 5a2d94329250ca4522ac81e2424e420902f12a56
                 {['home', 'about', 'menu', 'gallery', 'contact'].map((section, idx) => (
                   <motion.button
                     key={section}
@@ -120,7 +165,11 @@ export default function Header() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: idx * 0.1 }}
                     onClick={() => scrollToSection(section)}
+<<<<<<< HEAD
                     className="text-left text-sm text-gray-700 hover:text-orange-600 hover:bg-orange-50 transition-colors py-2.5 px-2 rounded capitalize font-medium"
+=======
+                    className="text-left text-sm text-gray-700 hover:text-teal-700 hover:bg-teal-50 transition-colors py-2.5 px-2 rounded capitalize"
+>>>>>>> 5a2d94329250ca4522ac81e2424e420902f12a56
                   >
                     {section}
                   </motion.button>
@@ -132,4 +181,8 @@ export default function Header() {
       </div>
     </motion.header>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 5a2d94329250ca4522ac81e2424e420902f12a56

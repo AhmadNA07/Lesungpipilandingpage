@@ -23,11 +23,21 @@ export default function Menu() {
   };
 
   const menuImages = [
+<<<<<<< HEAD
     { id: 1, label: 'Menu Page 1', src: '../images/menu1.png' },
     { id: 2, label: 'Menu Page 2', src: '../images/menu2.png' },
     { id: 3, label: 'Menu Page 3', src: '../images/menu3.png' },
     { id: 4, label: 'Menu Page 4', src: '../images/menu4.png' },
     { id: 5, label: 'Menu Page 5', src: '../images/menu5.png' },
+=======
+    { id: 1, label: 'Menu Page 1' },
+    { id: 2, label: 'Menu Page 2' },
+    { id: 3, label: 'Menu Page 3' },
+    { id: 4, label: 'Menu Page 4' },
+    { id: 5, label: 'Menu Page 5' },
+    { id: 6, label: 'Menu Page 6' },
+    { id: 7, label: 'Menu Page 7' },
+>>>>>>> 5a2d94329250ca4522ac81e2424e420902f12a56
   ];
 
   return (
@@ -42,6 +52,12 @@ export default function Menu() {
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-teal-900 mb-2 sm:mb-3">
             Menu Kami
           </h2>
+<<<<<<< HEAD
+=======
+          <p className="text-xs sm:text-sm text-gray-700 max-w-3xl mx-auto px-4">
+            Jelajahi pilihan menu istimewa kami yang dibuat dengan bahan-bahan berkualitas tinggi
+          </p>
+>>>>>>> 5a2d94329250ca4522ac81e2424e420902f12a56
         </motion.div>
 
         <motion.div
@@ -71,6 +87,7 @@ export default function Menu() {
               <div key={menu.id} className="outline-none">
                 <div className="bg-gradient-to-br from-stone-100 to-teal-50 rounded-xl overflow-hidden mx-auto" style={{ aspectRatio: '210/297' }}>
                   <div className="w-full h-full flex flex-col items-center justify-center p-6 sm:p-8">
+<<<<<<< HEAD
                     <img 
                       src={menu.src} 
                       alt={menu.label}
@@ -84,6 +101,21 @@ export default function Menu() {
                       <p className="text-xs text-gray-600 bg-white/80 inline-block px-3 py-1 rounded-full">
                         {menu.label}
                       </p>
+=======
+                    <div className="text-center">
+                      <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-teal-600 to-emerald-700 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                        <span className="text-white font-bold text-xl sm:text-2xl">{menu.id}</span>
+                      </div>
+                      <h3 className="text-lg sm:text-xl font-bold text-teal-900 mb-3 sm:mb-4">
+                        {menu.label}
+                      </h3>
+                      <p className="text-xs sm:text-sm text-gray-600 mb-4 sm:mb-6 max-w-md mx-auto">
+                        Upload gambar menu Anda di sini dengan format A4 (210x297mm)
+                      </p>
+                      <div className="bg-white/50 rounded-lg p-3 sm:p-4 text-[10px] sm:text-xs text-gray-500">
+                        Ganti dengan foto menu sebenarnya
+                      </div>
+>>>>>>> 5a2d94329250ca4522ac81e2424e420902f12a56
                     </div>
                   </div>
                 </div>
@@ -122,4 +154,8 @@ export default function Menu() {
       </div>
     </section>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 5a2d94329250ca4522ac81e2424e420902f12a56
